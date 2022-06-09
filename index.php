@@ -19,33 +19,25 @@ include_once __DIR__ . '/db.php';
 </head>
 <body>
     <nav></nav>
-    <main>
-        <div class="container">
-
-            <div class="row">
-
-                <!-- Single Card -->
-                <div class="my-container text-center d-flex justify-content-evenly flex-row flex-wrap">
-                    <?php foreach ($db as $card => $value) :?>
-                        <div class="image">
-                            <img src="<?php echo $value['poster'] ?>" alt="<?php echo $value['author'] ?>">
-                        </div>
-                        <div class="title">
-                        <?php echo $value['title'] ?>
-                            </div>
-                        <div class="author">
-                            <?php echo $value['author'] ?>
-                        </div>
-                        <div class="year">
-                            <?php echo $value['year'] ?>
-                        </div>
-                    <?php endforeach;?>
+    <main class="d-flex flex-wrap">
+        <!-- Single Card -->
+        <?php foreach ($db as $card => $value) :?>
+            <div class="my-container text-center">
+                <div class="image">
+                    <img src="<?php echo $value['poster'] ?>" alt="<?php echo $value['author'] ?>">
                 </div>
-                <!-- /Single Card -->
-
+                <div class="title">
+                <?php echo $value['title'] ?>
+                    </div>
+                <div class="author">
+                    <?php echo $value['author'] ?>
+                </div>
+                <div class="year">
+                    <?php echo $value['year'] ?>
+                </div>
             </div>
-
-        </div>
+        <?php endforeach;?>
+        <!-- /Single Card -->
     </main>
 
     <script src="db.js"></script>
