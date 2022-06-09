@@ -1,0 +1,40 @@
+
+/*
+    MAIN
+*/
+main{
+    background-color: var(--primary-color);
+    min-height: calc(100vh);
+    padding: 0 5vh 5vh 5vh;
+}
+
+/*
+    CARD
+*/
+.my-container{
+    color:rgb(128, 124, 121);
+    width: calc(100% / 5 - 2vw);
+    margin: 1vw;
+    background-color: var(--secondary-color);
+    padding: 1vw;
+    transition-duration: 500ms;
+}
+.my-container:hover{
+    cursor: pointer;
+}
+.my-container:active{
+    transform: scale(0.9);
+}
+.image{
+    width: 100%;
+}
+.image img{
+    width: 100%;
+}
+.title{
+    text-transform: uppercase;
+    color:white;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px;
+}
